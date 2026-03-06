@@ -27,7 +27,7 @@ export default function ExperienceSection({
       <hr />
       <p className="text-lg">{title}</p>
       {description ? <p>{description}</p> : <></>}
-      {tools ? <p>{tools.map(t => <span className="opacity-50 hover:opacity-100 mr-1">{t}</span>)}</p> : <></>}
+      {tools ? <p>{tools.map(t => <span key={t} className="opacity-50 hover:opacity-100 mr-1">{t}</span>)}</p> : <></>}
     </div>
   )
 }
