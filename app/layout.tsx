@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Poppins } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
-const font = Poppins({
+const font = Manrope({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body
         className={
           font.className +
-          " overscroll-none min-h-screen flex flex-col items-center justify-between relative"
+          " overscroll-none min-h-screen flex flex-col items-center justify-between relative m-10"
         }
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
